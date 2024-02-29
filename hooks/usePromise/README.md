@@ -2,7 +2,7 @@
 
 The usePromise hook is a custom React hook designed to simplify the management of asynchronous operations that return promises. It handles common asynchronous patterns such as loading indicators, error handling, and aborting requests. This hook is particularly useful for managing asynchronous data fetching in React applications.
 
-## 📚 Contents
+## 📚Contents
 
 - [🔧 Usage](#usage)
   - [🧩 Parameters](#parameters)
@@ -14,7 +14,7 @@ The usePromise hook is a custom React hook designed to simplify the management o
 - [🔦 Code](#code)
 - [🙏 Credits](#credits)
 
-## 🔧 Usage
+## 🔧Usage
 ```jsx
 import React from 'react';
 import usePromise from './usePromise';
@@ -40,7 +40,7 @@ function MyComponent() {
     * onError (default: ()=>undefined): A callback function invoked when an error occurs during the execution of the asynchronous operation.
     * onSuccess (default: ()=>undefined): A callback function invoked when the asynchronous operation completes successfully.
 
-### 📨 Return Value
+### 📨Return Value
 The usePromise hook returns an object with the following properties:
 
 * data: The result of the asynchronous operation.
@@ -49,10 +49,10 @@ The usePromise hook returns an object with the following properties:
 * run: A function that triggers the execution of the asynchronous operation.
 * abort: A function that aborts the ongoing asynchronous operation.
 
-### ⛔ Aborting Requests
+### ⛔Aborting Requests
 The abort function allows you to cancel an ongoing asynchronous operation. It utilizes the AbortController mechanism and throws a custom AbortError to signal the abortion.
 
-### 💡 Example
+### 💡Example
 ```jsx
 import { useState } from 'react';
 import usePromise from './usePromise';
@@ -82,15 +82,15 @@ function MyComponent() {
 }
 ```
 
-### ⚠️ Error Handling
+### ⚠️Error Handling
 Errors thrown during the execution of the asynchronous operation are caught and stored in the error state. Additionally, the onError callback, if provided, is invoked with the error object.
 
-### 📝 Note
+### 📝Note
 Ensure the provided asynchronous function (fn) returns a promise.
 The onError and onSuccess callbacks are optional and can be provided for custom error handling and side effects upon successful completion, respectively.
 The AbortError class is provided for graceful abortion of ongoing asynchronous operations.
 
-## 🔦 Code
+## 🔦Code
 Go to [source code](./usePromise.js) 
 <br><br>
 OR
@@ -176,7 +176,7 @@ export default usePromise;
 
 </details>
 
-## 🙏 Credits
+## 🙏Credits
 This hook was created and documented by Berat Vıcıl beratvicil@gmail.com.
 
 License
