@@ -10,48 +10,11 @@ The usePromise hook is a custom React hook designed to simplify the management o
   - [⛔ Aborting Requests](#aborting-requests)
   - [💡 Example](#example)
   - [⚠️ Error Handling](#error-handling)
-  - [📝 Note](#note)
+  - [📝 Notes](#notes)
 - [🔦 Code](#code)
 - [🙏 Credits](#credits)
 
 ## 🔧Usage
-```jsx
-import React from 'react';
-import usePromise from './usePromise';
-
-function MyComponent() {
-    const { data, isLoading, error, run, abort } = usePromise(fetchData);
-
-    return (
-        <div>
-            {isLoading && <p>Loading...</p>}
-            {error && <p>Error: {error.message}</p>}
-            {data && <p>Data: {data}</p>}
-            <button onClick={run}>Fetch Data</button>
-            <button onClick={abort}>Abort</button>
-        </div>
-    );
-}
-```
-### 🧩Parameters
-* fn: A function that returns a promise. This is the asynchronous operation to be executed.
-* options (optional):
-    * shouldExecute (default: true): A boolean indicating whether the asynchronous operation should be executed initially.
-    * onError (default: ()=>undefined): A callback function invoked when an error occurs during the execution of the asynchronous operation.
-    * onSuccess (default: ()=>undefined): A callback function invoked when the asynchronous operation completes successfully.
-
-### 📨Return Value
-The usePromise hook returns an object with the following properties:
-
-* data: The result of the asynchronous operation.
-* isLoading: A boolean indicating whether the asynchronous operation is currently in progress.
-* error: An error object containing details if an error occurred during the execution of the asynchronous operation.
-* run: A function that triggers the execution of the asynchronous operation.
-* abort: A function that aborts the ongoing asynchronous operation.
-
-### ⛔Aborting Requests
-The abort function allows you to cancel an ongoing asynchronous operation. It utilizes the AbortController mechanism and throws a custom AbortError to signal the abortion.
-
 ### 💡Example
 ```jsx
 import { useState } from 'react';
@@ -82,10 +45,31 @@ function MyComponent() {
 }
 ```
 
+### 🧩Parameters
+* fn: A function that returns a promise. This is the asynchronous operation to be executed.
+* options (optional):
+    * shouldExecute (default: true): A boolean indicating whether the asynchronous operation should be executed initially.
+    * onError (default: ()=>undefined): A callback function invoked when an error occurs during the execution of the asynchronous operation.
+    * onSuccess (default: ()=>undefined): A callback function invoked when the asynchronous operation completes successfully.
+
+### 📨Return Value
+The usePromise hook returns an object with the following properties:
+
+* data: The result of the asynchronous operation.
+* isLoading: A boolean indicating whether the asynchronous operation is currently in progress.
+* error: An error object containing details if an error occurred during the execution of the asynchronous operation.
+* run: A function that triggers the execution of the asynchronous operation.
+* abort: A function that aborts the ongoing asynchronous operation.
+
+### ⛔Aborting Requests
+The abort function allows you to cancel an ongoing asynchronous operation. It utilizes the AbortController mechanism and throws a custom AbortError to signal the abortion.
+
+
+
 ### ⚠️Error Handling
 Errors thrown during the execution of the asynchronous operation are caught and stored in the error state. Additionally, the onError callback, if provided, is invoked with the error object.
 
-### 📝Note
+### 📝Notes
 Ensure the provided asynchronous function (fn) returns a promise.
 The onError and onSuccess callbacks are optional and can be provided for custom error handling and side effects upon successful completion, respectively.
 The AbortError class is provided for graceful abortion of ongoing asynchronous operations.

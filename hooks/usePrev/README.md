@@ -9,6 +9,8 @@
 - [🙏 Credits](#credits)
 
 ## 🔧 Usage
+
+### 💡Example
 ```jsx
 import React, { useState } from "react";
 import usePrev from "./usePrev";
