@@ -3,6 +3,7 @@
 ## 📚 Contents
 
 - [🔧 Usage](#usage)
+  - [💡 Example](#example)
   - [🧩 Parameters](#parameters)
   - [📨 Return Value](#return-value)
 - [🔦 Code](#code)

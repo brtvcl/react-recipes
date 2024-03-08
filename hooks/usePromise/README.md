@@ -5,10 +5,10 @@ The usePromise hook is a custom React hook designed to simplify the management o
 ## 📚Contents
 
 - [🔧 Usage](#usage)
+  - [💡 Example](#example)
   - [🧩 Parameters](#parameters)
   - [📨 Return Value](#return-value)
   - [⛔ Aborting Requests](#aborting-requests)
-  - [💡 Example](#example)
   - [⚠️ Error Handling](#error-handling)
   - [📝 Notes](#notes)
 - [🔦 Code](#code)
@@ -63,8 +63,6 @@ The usePromise hook returns an object with the following properties:
 
 ### ⛔Aborting Requests
 The abort function allows you to cancel an ongoing asynchronous operation. It utilizes the AbortController mechanism and throws a custom AbortError to signal the abortion.
-
-
 
 ### ⚠️Error Handling
 Errors thrown during the execution of the asynchronous operation are caught and stored in the error state. Additionally, the onError callback, if provided, is invoked with the error object.
