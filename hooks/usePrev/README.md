@@ -1,6 +1,6 @@
-# 🎣 React Hook: usePrev
+# 🎣React Hook: usePrev
 
-## 📚 Contents
+## 📚Contents
 
 - [🔧 Usage](#usage)
   - [💡 Example](#example)
@@ -9,7 +9,7 @@
 - [🔦 Code](#code)
 - [🙏 Credits](#credits)
 
-## 🔧 Usage
+## 🔧Usage
 
 ### 💡Example
 ```jsx
@@ -33,13 +33,13 @@ export default ExampleComponent;
 
 ```
 
-## 🧩 Parameters
+## 🧩Parameters
 * value (*): The current value.
 
-## 📨 Return Value
+## 📨Return Value
 * (*) The previous value.
 
-## 🔦 Code
+## 🔦Code
 Go to [source code](./usePrev.js) 
 <br><br>
 OR
@@ -70,7 +70,7 @@ export default usePrev;
 ```
 </details>
 
-## 🙏 Credits
+## 🙏Credits
 Developed by Berat Vıcıl beratvicil@gmail.com
 
 License This code is released under the MIT License.

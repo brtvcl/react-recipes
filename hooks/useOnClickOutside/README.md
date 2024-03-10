@@ -42,7 +42,7 @@ This hook listens for both mouse clicks (mousedown) and touch events (touchstart
 Ensure that the ref passed to the hook refers to a valid DOM element. If the ref is null, the hook won't have any effect.
 The handler function passed to the hook will be called whenever a click occurs outside of the referenced DOM element.
 
-## 🔦 Code
+## 🔦Code
 Go to [source code](./useOnClickOutside.js) 
 <br><br>
 OR
@@ -92,7 +92,7 @@ export default useOnClickOutside;
 ```
 </details>
 
-## 🙏 Credits
+## 🙏Credits
 Developed by Berat Vıcıl beratvicil@gmail.com
 
 License This code is released under the MIT License.
